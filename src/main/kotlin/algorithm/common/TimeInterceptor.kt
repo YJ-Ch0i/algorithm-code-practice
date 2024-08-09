@@ -2,6 +2,9 @@ package org.example.algorithm.common
 
 import kotlin.reflect.KFunction
 
+/**
+ * 함수 실행 시간 계산을 위한 선행/후행 함수 호출
+ */
 object TimeInterceptor {
 
     fun preTimeCheck(): Long
@@ -18,6 +21,9 @@ object TimeInterceptor {
     }
 }
 
+/**
+ * 시간 계산을 위해 감싸줄 함수
+ */
 fun <R> wrapTimerFunction(
     function: KFunction<R>,
     vararg params: Any
